@@ -2,14 +2,14 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 qD_MLE <- function(q, ai) {
-    .Call(`_hiDIP_qD_MLE`, q, ai)
+    .Call('_hiDIP_qD_MLE', PACKAGE = 'hiDIP', q, ai)
 }
 
 qDSub2 <- function(q, f1, A, n) {
-    .Call(`_hiDIP_qDSub2`, q, f1, A, n)
+    .Call('_hiDIP_qDSub2', PACKAGE = 'hiDIP', q, f1, A, n)
 }
 
 qDSub <- function(q, Xi, n) {
-    .Call(`_hiDIP_qDSub`, q, Xi, n)
+    .Call('_hiDIP_qDSub', PACKAGE = 'hiDIP', q, Xi, n)
 }
 

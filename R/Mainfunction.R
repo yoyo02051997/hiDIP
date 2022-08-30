@@ -8,6 +8,16 @@
 #' @param datatype data type of input data: individual-based abundance data \code{(datatype = "abundance")}, sampling-unit-based incidence frequencies data \code{(datatype = "incidence")},
 #' @return
 #' a data.frame of basic data information incliuding sample size, observed species richness, sample coverage estimate, and the first ten abundance frequency counts.
+#' @import dplyr
+#' @import Rcpp
+#' @import ggplot2
+#' @import data.tree
+#' @import ape
+#' @import ade4
+#' @import phytools
+#' @import reshape2
+#' @import networkD3
+#' @import maps
 #' @examples
 #' ## Taxonomic diversity
 #' data(macro)
@@ -47,7 +57,6 @@ DataInfo = function(data, diversity = "TD", datatype = "abundance", tree = NULL)
 #' @param decomposition Relative decomposition: \code{(decomposition = "relative")}, Absolute decomposition: \code{(decomposition = "absolute")}.
 #' @import dplyr
 #' @import Rcpp
-#' @import treemap
 #' @import ggplot2
 #' @import data.tree
 #' @import ape
@@ -55,9 +64,7 @@ DataInfo = function(data, diversity = "TD", datatype = "abundance", tree = NULL)
 #' @import phytools
 #' @import reshape2
 #' @import networkD3
-#' @import readr
-#' @return
-#'
+#' @import maps
 #' @examples
 #' ## Taxonomic diversity
 #' data(macro)
@@ -88,7 +95,6 @@ hier.taxonomy = function(data, mat, q = seq(0, 2, 0.2), weight = "size", nboot =
 #' @param decomposition Relative decomposition: \code{(decomposition = "relative")}, Absolute decomposition: \code{(decomposition = "absolute")}.
 #' @import dplyr
 #' @import Rcpp
-#' @import treemap
 #' @import ggplot2
 #' @import data.tree
 #' @import ape
@@ -96,9 +102,7 @@ hier.taxonomy = function(data, mat, q = seq(0, 2, 0.2), weight = "size", nboot =
 #' @import phytools
 #' @import reshape2
 #' @import networkD3
-#' @import readr
-#' @return
-#'
+#' @import maps
 #' @examples
 #' ## Phylogeny diversity
 #' data(macro)
@@ -204,7 +208,6 @@ hier.phylogeny <- function(data, mat, tree, q = seq(0, 2, 0.2), weight = "size",
 #' @param decomposition Relative decomposition: \code{(decomposition = "relative")}, Absolute decomposition: \code{(decomposition = "absolute")}.
 #' @import dplyr
 #' @import Rcpp
-#' @import treemap
 #' @import ggplot2
 #' @import data.tree
 #' @import ape
@@ -212,9 +215,7 @@ hier.phylogeny <- function(data, mat, tree, q = seq(0, 2, 0.2), weight = "size",
 #' @import phytools
 #' @import reshape2
 #' @import networkD3
-#' @import readr
-#' @return
-#'
+#' @import maps
 #' @examples
 #' ## Functional diversity
 #' data(macro)
@@ -354,7 +355,7 @@ hier.functional <- function(data, mat, dis, q = seq(0, 2, 0.2), FDtype = "tau_va
 }
 # gghier_taxonomy -------------------------------------------------------------------
 #' ggplot2 extension for outcome from \code{hier_taxonomy}
-#' @param outcome a list object computed by \code{\link{hier_taxonomy}}.
+#' @param outcome a list object computed by \code{hier_taxonomy}.
 #' @param method \code{(method = 1)} diversity(alpha, gamma) based on Tsallis entropy (1988);\code{(method = 2)} beta diversity based on additive decomposition;
 #' \code{(method = 3)} dissimilarity measure based on additive decomposition;\code{(method = 4)} diversity(alpha, gamma) based on Hill Number (1973);
 #' \code{(method = 5)} beta diversity based on multiplicative  decomposition;\code{(method = 6)} dissimilarity measure based on multiplicative decomposition.
@@ -416,7 +417,7 @@ gghier_taxonomy = function(outcome, method = 1){
 
 # gghier_phylogeny -------------------------------------------------------------------
 #' ggplot2 extension for outcome from \code{hier_phylogeny}
-#' @param outcome a list object computed by \code{\link{hier_phylogeny}}.
+#' @param outcome a list object computed by \code{hier_phylogeny}.
 #' @param method \code{(method = 1)} diversity(alpha, gamma) based on Tsallis entropy (1988);\code{(method = 2)} beta diversity based on additive decomposition;
 #' \code{(method = 3)} dissimilarity measure based on additive decomposition;\code{(method = 4)} diversity(alpha, gamma) based on Hill Number (1973);
 #' \code{(method = 5)} beta diversity based on multiplicative  decomposition;\code{(method = 6)} dissimilarity measure based on multiplicative decomposition.
@@ -478,7 +479,7 @@ gghier_phylogeny = function(outcome, method = 1){
 }
 # gghier_functional -------------------------------------------------------------------
 #' ggplot2 extension for outcome from \code{hier_functional}
-#' @param outcome a list object computed by \code{\link{hier_functional}}.
+#' @param outcome a list object computed by \code{hier_functional}.
 #' @param method \code{(method = 1)} diversity(alpha, gamma) based on Tsallis entropy (1988);\code{(method = 2)} beta diversity based on additive decomposition;
 #' \code{(method = 3)} dissimilarity measure based on additive decomposition;\code{(method = 4)} diversity(alpha, gamma) based on Hill Number (1973);
 #' \code{(method = 5)} beta diversity based on multiplicative  decomposition;\code{(method = 6)} dissimilarity measure based on multiplicative decomposition.

@@ -7,7 +7,7 @@
 gghier_functional(outcome, method = 1, profile = "q")
 }
 \arguments{
-\item{outcome}{a list object computed by \code{\link{hier_functional}}.}
+\item{outcome}{a list object computed by \code{hier_functional}.}
 
 \item{method}{\code{(method = 1)} diversity(alpha, gamma) based on Tsallis entropy (1988);\code{(method = 2)} beta diversity based on additive decomposition;
 \code{(method = 3)} dissimilarity measure based on additive decomposition;\code{(method = 4)} diversity(alpha, gamma) based on Hill Number (1973);

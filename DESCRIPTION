@@ -21,11 +21,8 @@ Imports:
     phytools,
     reshape2,
     networkD3,
-    treemap,
-    readr,
-    phyclust,
-    tibble,
-    tidytree
+    maps
 LazyData: true
+Encoding: UTF-8
 RoxygenNote: 7.2.1
 LinkingTo: Rcpp

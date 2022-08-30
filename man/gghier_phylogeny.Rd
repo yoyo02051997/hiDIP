@@ -7,7 +7,7 @@
 gghier_phylogeny(outcome, method = 1)
 }
 \arguments{
-\item{outcome}{a list object computed by \code{\link{hier_phylogeny}}.}
+\item{outcome}{a list object computed by \code{hier_phylogeny}.}
 
 \item{method}{\code{(method = 1)} diversity(alpha, gamma) based on Tsallis entropy (1988);\code{(method = 2)} beta diversity based on additive decomposition;
 \code{(method = 3)} dissimilarity measure based on additive decomposition;\code{(method = 4)} diversity(alpha, gamma) based on Hill Number (1973);

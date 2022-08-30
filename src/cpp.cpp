@@ -20,7 +20,6 @@ NumericVector qD_MLE(NumericVector q,NumericVector ai){
 // [[Rcpp::export]]
 NumericVector qDSub2(double q, int f1, double A, const int n){
   NumericVector tmp(n);
-  double out = 0;
   for(int r=0;r<=(n-1);r++){
     tmp[r] = Rf_choose(q-1, r)*pow(A-1, r);
   }

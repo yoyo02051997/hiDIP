@@ -7,7 +7,7 @@
 gghier_taxonomy(outcome, method = 1)
 }
 \arguments{
-\item{outcome}{a list object computed by \code{\link{hier_taxonomy}}.}
+\item{outcome}{a list object computed by \code{hier_taxonomy}.}
 
 \item{method}{\code{(method = 1)} diversity(alpha, gamma) based on Tsallis entropy (1988);\code{(method = 2)} beta diversity based on additive decomposition;
 \code{(method = 3)} dissimilarity measure based on additive decomposition;\code{(method = 4)} diversity(alpha, gamma) based on Hill Number (1973);
