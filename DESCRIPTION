@@ -1,0 +1,31 @@
+Package: hiDIP
+Type: Package
+Title: Hierachical Decomposition Partitioning
+Version: 1.0.1
+Author: Anne Chao, Jian-You Lin
+Maintainer: Anne Chao <chao@stat.nthu.edu.tw>
+Description: Provides functions for hierachical diversity analysis.
+License: GPL (>= 3)
+Depends:
+    R (>= 4.0)
+Suggests: knitr,
+    rmarkdown,
+    ggpubr
+Imports:
+    Rcpp,
+    dplyr,
+    ggplot2,
+    ape,
+    data.tree,
+    ade4,
+    phytools,
+    reshape2,
+    networkD3,
+    treemap,
+    readr,
+    phyclust,
+    tibble,
+    tidytree
+LazyData: true
+RoxygenNote: 7.2.1
+LinkingTo: Rcpp

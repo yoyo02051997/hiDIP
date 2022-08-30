@@ -1,0 +1,41 @@
+\documentclass[a4paper]{book}
+\usepackage[times,inconsolata,hyper]{Rd}
+\usepackage{makeidx}
+\usepackage[utf8]{inputenc} % @SET ENCODING@
+% \usepackage{graphicx} % @USE GRAPHICX@
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge Package `hiDIP'}}
+\par\bigskip{\large \today}
+\end{center}
+\inputencoding{utf8}
+\ifthenelse{\boolean{Rd@use@hyper}}{\hypersetup{pdftitle = {hiDIP: Hierachical Decomposition Partitioning}}}{}\begin{description}
+\raggedright{}
+\item[Type]\AsIs{Package}
+\item[Title]\AsIs{Hierachical Decomposition Partitioning}
+\item[Version]\AsIs{1.0.1}
+\item[Author]\AsIs{Anne Chao, Jian-You Lin}
+\item[Maintainer]\AsIs{Anne Chao }\email{chao@stat.nthu.edu.tw}\AsIs{}
+\item[Description]\AsIs{Provides functions for hierachical diversity analysis.}
+\item[License]\AsIs{GPL (>= 3)}
+\item[Suggests]\AsIs{knitr,
+rmarkdown,
+ggpubr}
+\item[Imports]\AsIs{Rcpp,
+dplyr,
+ggplot2,
+ape,
+data.tree,
+ade4,
+phytools,
+reshape2,
+networkD3,
+treemap,
+readr}
+\item[Encoding]\AsIs{UTF-8}
+\item[LazyData]\AsIs{true}
+\item[RoxygenNote]\AsIs{7.1.2}
+\end{description}
+\Rdcontents{\R{} topics documented:}
