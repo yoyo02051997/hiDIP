@@ -268,7 +268,7 @@ hier.functional <- function(data, mat, dis, q = seq(0, 2, 0.2), FDtype = "tau_va
         out
       }) %>% do.call(rbind, .)
     }else{
-      qp = hier.func.rel(data, mat, dis, q, FDtype = FDtype, FDtau = FDtau, weight, type, nboot, datatype)
+      qp = hier.func.rel(data, mat, dis, q, FDtype = FDtype, FDtau = 0.5, weight, type, nboot, datatype)
       out <- lapply(seq_along(q), function(i) {
         
         nn <- abs(qnorm(1 - (1 - conf)/2))
