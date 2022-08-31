@@ -2,6 +2,7 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
+
 // [[Rcpp::export]]
 NumericVector qD_MLE(NumericVector q,NumericVector ai){
   const int length = q.size();

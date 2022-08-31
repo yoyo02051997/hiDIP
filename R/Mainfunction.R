@@ -567,7 +567,8 @@ gghier_functional = function(outcome, method = 1, profile = "q"){
         facet_grid(group~Order.q)
     }
   }
-  
+ 
+   
   out = out  + theme_bw() + 
      + theme(legend.position = "bottom",legend.box = "vertical", 
                                         legend.key.width = unit(1.2, "cm"), 

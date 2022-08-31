@@ -180,6 +180,7 @@ entropy_true_inc <- function(p, q){
   sapply(q, Sub)
 }
 
+
 entropy_est <- function(x, q){
   x = x[x > 0]
   n = sum(x)
