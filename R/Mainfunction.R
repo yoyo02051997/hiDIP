@@ -462,7 +462,7 @@ gghier_phylogeny = function(outcome, method = 1){
   }
   
   out = out  + theme_bw() + 
-     + theme(legend.position = "bottom",legend.box = "vertical", 
+      theme(legend.position = "bottom",legend.box = "vertical", 
                                         legend.key.width = unit(1.2, "cm"), 
                                         legend.title = element_blank(), 
                                         legend.margin = margin(0, 0, 0, 0), 
@@ -570,7 +570,7 @@ gghier_functional = function(outcome, method = 1, profile = "q"){
  
    
   out = out  + theme_bw() + 
-     + theme(legend.position = "bottom",legend.box = "vertical", 
+      theme(legend.position = "bottom",legend.box = "vertical", 
                                         legend.key.width = unit(1.2, "cm"), 
                                         legend.title = element_blank(), 
                                         legend.margin = margin(0, 0, 0, 0), 
