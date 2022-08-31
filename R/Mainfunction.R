@@ -400,17 +400,14 @@ gghier_taxonomy = function(outcome, method = 1){
                                               ymax = UCL, fill = Method), linetype = 0, 
                                           alpha = 0.2)
   }
-  cbPalette <- rev(c("#999999", "#E69F00", "#56B4E9", "#009E73", 
-                     "#330066", "#CC79A7", "#0072B2", "#D55E00"))
-  out = out + scale_colour_manual(values = cbPalette) + theme_bw() + 
-    scale_fill_manual(values = cbPalette) + theme(legend.position = "bottom", 
-                                                  legend.box = "vertical", 
-                                                  legend.key.width = unit(1.2, "cm"), 
-                                                  legend.title = element_blank(), 
-                                                  legend.margin = margin(0, 0, 0, 0), 
-                                                  legend.box.margin = margin(-10, -10, -5, -10), 
-                                                  text = element_text(size = 16), 
-                                                  plot.margin = unit(c(5.5, 5.5, 5.5, 5.5), "pt")) + 
+  out = out  + theme_bw() + 
+     theme(legend.position = "bottom",legend.box = "vertical", 
+                                      legend.key.width = unit(1.2, "cm"), 
+                                      legend.title = element_blank(), 
+                                      legend.margin = margin(0, 0, 0, 0), 
+                                      legend.box.margin = margin(-10, -10, -5, -10), 
+                                      text = element_text(size = 16), 
+                                      plot.margin = unit(c(5.5, 5.5, 5.5, 5.5), "pt")) + 
     guides(linetype = guide_legend(keywidth = 2.5))
   return(out)
 }
@@ -463,17 +460,15 @@ gghier_phylogeny = function(outcome, method = 1){
                                               ymax = UCL, fill = Method), linetype = 0, 
                                           alpha = 0.2)
   }
-  cbPalette <- rev(c("#999999", "#E69F00", "#56B4E9", "#009E73", 
-                     "#330066", "#CC79A7", "#0072B2", "#D55E00"))
-  out = out + scale_colour_manual(values = cbPalette) + theme_bw() + 
-    scale_fill_manual(values = cbPalette) + theme(legend.position = "bottom", 
-                                                  legend.box = "vertical", 
-                                                  legend.key.width = unit(1.2, "cm"), 
-                                                  legend.title = element_blank(), 
-                                                  legend.margin = margin(0, 0, 0, 0), 
-                                                  legend.box.margin = margin(-10, -10, -5, -10), 
-                                                  text = element_text(size = 16), 
-                                                  plot.margin = unit(c(5.5, 5.5, 5.5, 5.5), "pt")) + 
+  
+  out = out  + theme_bw() + 
+     + theme(legend.position = "bottom",legend.box = "vertical", 
+                                        legend.key.width = unit(1.2, "cm"), 
+                                        legend.title = element_blank(), 
+                                        legend.margin = margin(0, 0, 0, 0), 
+                                        legend.box.margin = margin(-10, -10, -5, -10), 
+                                        text = element_text(size = 16), 
+                                        plot.margin = unit(c(5.5, 5.5, 5.5, 5.5), "pt")) + 
     guides(linetype = guide_legend(keywidth = 2.5))
   return(out)
 }
@@ -573,17 +568,14 @@ gghier_functional = function(outcome, method = 1, profile = "q"){
     }
   }
   
-  cbPalette <- rev(c("#999999", "#E69F00", "#56B4E9", "#009E73", 
-                     "#330066", "#CC79A7", "#0072B2", "#D55E00"))
-  out = out + scale_colour_manual(values = cbPalette) + theme_bw() + 
-    scale_fill_manual(values = cbPalette) + theme(legend.position = "bottom", 
-                                                  legend.box = "vertical", 
-                                                  legend.key.width = unit(1.2, "cm"), 
-                                                  legend.title = element_blank(), 
-                                                  legend.margin = margin(0, 0, 0, 0), 
-                                                  legend.box.margin = margin(-10, -10, -5, -10), 
-                                                  text = element_text(size = 16), 
-                                                  plot.margin = unit(c(5.5, 5.5, 5.5, 5.5), "pt")) + 
+  out = out  + theme_bw() + 
+     + theme(legend.position = "bottom",legend.box = "vertical", 
+                                        legend.key.width = unit(1.2, "cm"), 
+                                        legend.title = element_blank(), 
+                                        legend.margin = margin(0, 0, 0, 0), 
+                                        legend.box.margin = margin(-10, -10, -5, -10), 
+                                        text = element_text(size = 16), 
+                                        plot.margin = unit(c(5.5, 5.5, 5.5, 5.5), "pt")) + 
     guides(linetype = guide_legend(keywidth = 2.5))
   return(out)
 }
